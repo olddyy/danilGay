@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Калькулятор формулы</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Калькулятор</h1>
+
+      <p class="formula">
+        z = (x - (a × (y - 1))) / y
+      </p>
+
+      <div class="inputs">
+        <label for="x">
+          x — общее расстояние
+          <input type="number" id="x" placeholder="Введите x" step="any" />
+        </label>
+
+        <label for="y">
+          y — количество делений
+          <input type="number" id="y" placeholder="Введите y" step="1" min="1" />
+        </label>
+
+        <label for="a">
+          a — ширина рамы (мм)
+          <input type="number" id="a" value="50" placeholder="Введите ширину рамы" step="any" />
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="calculateBtn">Посчитать</button>
+        <button id="clearBtn" class="secondary">Очистить</button>
+      </div>
+
+      <div class="result-box">
+        <p><strong>Результат (ширина стекла мм):</strong> <span id="result">—</span></p>
+        <p id="details" class="details"></p>
+        <p id="error" class="error"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
